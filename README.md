@@ -114,7 +114,7 @@ delainventory/
 Clone o repositório:
 
 ```bash
-git clone https://github.com/VitorPaloco/delainventory.git
+git clone https://github.com/VitorPaloco/Delainventory-GLPI.git
 ```
 
 Copie o plugin para o diretório de plugins do GLPI:
