@@ -1,4 +1,4 @@
-# 📦 Delainventory - Controle de Inventário e Etiquetas para GLPI
+# 📦 Delainventory - GLPI
 
 Plugin desenvolvido para o GLPI com foco em rastreabilidade de inventário, histórico de conferências e impressão de etiquetas patrimoniais via impressoras Zebra.
 
@@ -10,18 +10,15 @@ O plugin adiciona uma nova aba aos ativos do GLPI, permitindo registrar inventá
 
 <br>
 
-<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"/> <img src="https://img.shields.io/badge/GLPI-2C6BED?style=for-the-badge"/> <img src="https://img.shields.io/badge/Zebra_ZPL-000000?style=for-the-badge"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"/> <img src="https://img.shields.io/badge/GLPI-2C6BED?style=for-the-badge"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/> <img src="https://img.shields.io/badge/Zebra_ZPL-000000?style=for-the-badge"/>
 
 ## ✨ Funcionalidades
 
 - Registro manual de inventários realizados pelos usuários;
-- Histórico completo de inventários por ativo;
-- Identificação do usuário responsável por cada ação;
 - Compatível com múltiplos tipos de ativos;
 - Geração automática de etiquetas patrimoniais;
 - QR Code apontando diretamente para o ativo no GLPI;
 - Envio de comandos ZPL diretamente para impressoras Zebra via rede;
-- Interface integrada às telas nativas do GLPI.
 
 ## 🖥️ Ativos Suportados
 
@@ -69,18 +66,16 @@ delainventory/
 ├── front/
 │   ├── action.php
 │   ├── config.php
+│   ├── log.php
 │   └── print.php
 │
-├── inc/
-│   ├── config.class.php
-│   ├── log.class.php
-│   └── setup.php
+├── src/
+│   ├── Config.php
+│   └── Log.php
 │
 ├── templates/
-│   └── log.php
-│
-├── sql/
-│   └── install.sql
+│   ├── config.html.twig
+│   └── log.html.twig
 │
 ├── hook.php
 └── setup.php
@@ -146,13 +141,10 @@ Configurar → Plugins → Delainventory → Instalar → Ativar
 
 ## 📈 Próximas Evoluções
 
-- Leitura de QR Code via dispositivo móvel;
-- Inventário em lote;
-- Dashboard de auditoria;
-- Relatórios gerenciais;
-- Integração com coletores de dados;
-- Controle de localização dos ativos;
-- Exportação de histórico para Excel/PDF.
+- Inserção do IP e porta da impressora diretamente no GLPI
+- Inserção do template ZPL diretamente no GLPI
+- Permitir demais formatos de etiqueta (EPL, CPCL...) e tamanhos
+- Exportação de histórico para Excel/PDF
 
 ## 👨‍💻 Autor
 
